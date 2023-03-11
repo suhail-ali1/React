@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script> 
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        
+    </div>
+    <script type="text/babel">
+        class Component1 extends React.Component 
+        {
+            render()
+            {
+                return <div>I am React Compoment Using Class <Component2 /></div>
+            }
+
+        }
+        function Component2()
+        {
+            const handleclick = () => {
+                alert("I was Clicked")
+            }
+
+            return (
+                <button onClick={handleclick} >Click Me</button>
+            )
+        }
+        
+        ReactDOM.render(<Component1 /> , document.getElementById("root"))
+
+    </script>
+</body>
+</html>
